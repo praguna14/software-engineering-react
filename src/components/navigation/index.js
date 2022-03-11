@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./navigation.css";
 import {useLocation, Link} from "react-router-dom";
@@ -35,7 +36,7 @@ function Navigation() {
       })
       }
       </ul>
-     <a href="#/" className="mt-3 btn btn-lg btn-primary rounded-pill w-100 fw-bold text-white">
+     <a href="#" className="mt-3 btn btn-lg btn-primary rounded-pill w-100 fw-bold text-white">
       Tuit</a>
     </div>
   );
