@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const TUITS_API = "https://sfe-node-praguna-singh-a2.herokuapp.com/tuits";
-const USERS_API = "https://sfe-node-praguna-singh-a2.herokuapp.com/users";
+const TUITS_API = "https://sfe-node-praguna-singh-a2.herokuapp.com/api/tuits";
+const USERS_API = "https://sfe-node-praguna-singh-a2.herokuapp.com/api/users";
 
 export const findAllTuits = () =>
     axios.get(TUITS_API)
@@ -15,7 +15,7 @@ export const findTuitByUser = (uid) =>
     axios.get(`${USERS_API}/${uid}/tuits`)
         .then(response => response.data);
 
-export const createTuit = (uid, tuit) =>
+export const createTuit = async (uid, tuit) =>
     axios.post(`${USERS_API}/${uid}/tuits`, tuit)
         .then(response => response.data);
 
@@ -25,4 +25,8 @@ export const updateTuit = (tid, tuit) =>
 
 export const deleteTuit = (tid) =>
     axios.delete(`${TUITS_API}/${tid}`)
+        .then(response => response.data);
+
+export const deleteTuitByUserId = (uid) =>
+    axios.delete(`${USERS_API}/tuits/${uid}`)
         .then(response => response.data);
