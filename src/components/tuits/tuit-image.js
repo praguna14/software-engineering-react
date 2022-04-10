@@ -1,4 +1,5 @@
 import React from "react";
+
 const TuitImage = ({tuit}) => {
   return(
     <div className="position-relative">

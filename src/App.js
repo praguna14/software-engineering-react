@@ -5,10 +5,13 @@ import './styles.css';
 // import WhatsHappening from "./components/whats-happening/whats-happening";
 // import Bookmarks from "./components/bookmarks/bookmarks";
 import Tuiter from "./components/tuiter";
+import { HashRouter } from "react-router-dom";
 
 function App() {
   return (
+    <HashRouter>
     <Tuiter/>
+    </HashRouter>
   );
 }
 
