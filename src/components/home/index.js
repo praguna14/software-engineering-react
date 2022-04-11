@@ -21,7 +21,7 @@ const Home = () => {
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
     let isMounted = true;
-    if (tuits.length == 0) {
+    if (tuits.length === 0) {
       findTuits();
     }
     return () => { isMounted = false; }

@@ -10,7 +10,7 @@ const Tuit = ({ tuit, deleteTuit, likeTuit, dislikeTuit }) => {
                 {
                     tuit.postedBy &&
                         tuit.postedBy.username ?
-                        <img src={`../images/${(tuit.postedBy.username) ? tuit.postedBy.username : "NASA"}.jpg`}
+                        <img alt='' src={`../images/${(tuit.postedBy.username) ? tuit.postedBy.username : "NASA"}.jpg`}
                             className="ttr-tuit-avatar-logo rounded-circle mt-2 w-100 ttr-rounded-5px" /> :
                         <i class="fa-solid fa-user-tie"></i>
                 }

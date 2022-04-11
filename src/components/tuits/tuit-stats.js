@@ -8,12 +8,11 @@ const TuitStats = ({ tuit, likeTuit, dislikeTuit }) => {
         <span onClick={() => likeTuit(tuit)}>
           {
             tuit.stats.likes > 0 &&
-            <i className="fas fa-heart"
-              style={{ color: 'red' }}></i>
+            <i class="fa-solid fa-thumbs-up"></i>
           }
           {
             tuit.stats.likes <= 0 &&
-            <i className="far fa-heart"></i>
+            <i class="fa-regular fa-thumbs-up"></i>
           }
           {tuit.stats && tuit.stats.likes}
         </span>
