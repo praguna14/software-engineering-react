@@ -14,4 +14,8 @@ export const userTogglesTuitLikes = (uid, tid) =>
 
 export const userTogglesTuitDislike = (uid, tid) =>
     api.delete(`${USERS_API}/${uid}/unlikes/${tid}`)
-    .then(response => response.data);
+        .then(response => response.data);
+
+export const findAllTuitsLikedByUser = (userId) =>
+    api.get(`${USERS_API}/${userId}/likes`)
+        .then(response => response.data);
