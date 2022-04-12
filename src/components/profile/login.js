@@ -12,10 +12,10 @@ export const Login = () => {
   return (
     <div>
       <h1>Login</h1>
-      <input onChange={(e) =>
+      <input placeholder="username" onChange={(e) =>
         setLoginUser({...loginUser,
           username: e.target.value})}/>
-      <input onChange={(e) =>
+      <input placeholder="password" onChange={(e) =>
         setLoginUser({...loginUser,
           password: e.target.value})}/>
       <button onClick={login}>

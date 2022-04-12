@@ -6,6 +6,7 @@ import TuitsAndReplies
   from "./tuits-and-replies";
 import Media from "./media";
 import MyLikes from "./my-likes";
+import MyDislikes from "./my-dislikes";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -35,10 +36,10 @@ const Profile = () => {
           <i className="fa fa-badge-check text-primary" /></h4>
         <span className="ps-2">67.6K Tuits</span>
         <div className="mb-5 position-relative">
-          <img className="w-100" src="../images/nasa-profile-header.jpg" />
+          <img alt='nasa-log' className="w-100" src="../images/nasa-profile-header.jpg" />
           <div className="bottom-0 left-0 position-absolute">
             <div className="position-relative">
-              <img className="position-relative ttr-z-index-1 ttr-top-40px ttr-width-150px"
+              <img alt='nasa' className="position-relative ttr-z-index-1 ttr-top-40px ttr-width-150px"
                 src="../images/nasa-3.png" />
             </div>
           </div>
@@ -106,7 +107,7 @@ const Profile = () => {
         <Route path="/tuits-and-replies" element={<TuitsAndReplies />} />
         <Route path="/media" element={<Media />} />
         <Route path="/likes" element={<MyLikes />} />
-        {/* <Route path="/dislike" element={<MyDislikes/>}/> */}
+        <Route path="/dislikes" element={<MyDislikes />} />
         <Route
           path="*"
           element={<Navigate to="/profile/mytuits" />}
