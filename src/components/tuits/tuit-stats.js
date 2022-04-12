@@ -18,15 +18,7 @@ const TuitStats = ({ tuit, likeTuit, dislikeTuit }) => {
         </span>
 
         <span data-testid="dislikeButton" onClick={() => dislikeTuit(tuit)}>
-          {
-            tuit.stats.dislikes > 0 &&
-            <i class="fa-solid fa-thumbs-down"></i>
-          }
-          {
-            tuit.stats.dislikes <= 0 &&
-            <i class="fa-regular fa-thumbs-down"></i>
-          }
-          {tuit.stats && tuit.stats.dislikes}
+          <i class="fa-regular fa-thumbs-down"></i>
         </span>
       </div>
       ...
